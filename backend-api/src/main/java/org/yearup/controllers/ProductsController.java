@@ -81,7 +81,8 @@ public class ProductsController
     {
         try
         {
-            productDao.create(product);
+            // this was the bug where products were duplicated.  Needed to update rather than create a neww one
+            productDao.update(id, product);
         }
         catch(Exception ex)
         {
