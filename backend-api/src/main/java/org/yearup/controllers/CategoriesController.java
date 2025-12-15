@@ -10,11 +10,11 @@ import org.yearup.models.Product;
 
 import java.util.List;
 
-
 @RestController
 // Tells Spring this class handles REST requests and returns JSON
 @RequestMapping("/categories")
 // Base URL for all endpoints in this controller
+@CrossOrigin(origins = "http://localhost:8080")
 public class CategoriesController
 {
     private CategoryDao categoryDao;
