@@ -59,7 +59,7 @@ public class MySqlShoppingCartDao extends MySqlDaoBase implements ShoppingCartDa
         return cart;
     }
 
-   // adds product
+    // adds product
     @Override
     public void addProduct(int userId, int productId)
     {
