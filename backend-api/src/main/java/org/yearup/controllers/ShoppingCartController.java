@@ -117,7 +117,7 @@ public class ShoppingCartController
     @DeleteMapping("")
     @PreAuthorize("hasAnyRole('ADMIN','USER')")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void clearCart(Principal principal)
+    public ShoppingCart clearCart(Principal principal)
     {
         // gets logged-in username
         String userName = principal.getName();
@@ -126,7 +126,7 @@ public class ShoppingCartController
         User user = userDao.getByUserName(userName);
 
         // clears cart for this user
-        shoppingCartDao.clearCart(user);
+        return shoppingCartDao.clearCart(user);
     }
 }
 

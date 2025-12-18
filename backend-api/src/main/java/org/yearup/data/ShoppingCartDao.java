@@ -10,6 +10,6 @@ public interface ShoppingCartDao {
     ShoppingCart updateProductQuantity(ShoppingCartItem item, User user);
     // Updates existing item in a users shopping cart (says no usages as I use-
     // "addProduct" in controller to update over the currently added
-    void clearCart(User user);
+    ShoppingCart clearCart(User user);
 }
 
