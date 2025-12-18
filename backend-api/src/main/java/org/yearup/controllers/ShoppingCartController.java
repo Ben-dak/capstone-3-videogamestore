@@ -85,7 +85,7 @@ public class ShoppingCartController
         return shoppingCartDao.addProduct(item,user);
     }
 
-    // put method
+    // if there is more than 1 of the same item in the cart - add another
     @PutMapping("products/{productId}")
     @PreAuthorize("hasAnyRole('ADMIN','USER')")
     public ShoppingCart updateCart(@PathVariable int productId,@RequestBody ShoppingCartItem cartItem, Principal principal) {
